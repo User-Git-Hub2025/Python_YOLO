@@ -216,6 +216,8 @@ def train(hyp, opt, device, callbacks):
     amp = check_amp(model)
 
 
+
+
     # Freeze
     freeze = [f"model.{x}." for x in (freeze if len(freeze) > 1 else range(freeze[0]))]  # layers to freeze
     for k, v in model.named_parameters():
